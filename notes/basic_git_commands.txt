@@ -1,0 +1,19 @@
+
+# From command line, "check out" repository:
+git clone https://github.com/sta426hs2015/overview.git
+
+
+# may need to set these parameters
+git config --list
+git config --global user.name markrobinsonuzh
+
+
+# after making changes, commit them to local staging area with message
+git commit -a -m "added additional links to blogs"
+
+# push changes to online repo (local -> online)
+git push origin master
+
+
+# update from any changes (online -> local)
+git pull origin

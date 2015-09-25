@@ -1,0 +1,15 @@
+# From R studio
+
+"File" .. "New File ->" .. "R Markdown .."
+Select HTML/PDF
+.. this will open a Rmd template.
+
+
+
+# From R command line
+rmarkdown::render("demo.Rmd",rmarkdown::html_document())
+
+
+
+
+
