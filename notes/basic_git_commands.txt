@@ -1,6 +1,6 @@
 
 # From command line, "check out" repository:
-git clone https://github.com/sta426hs2015/overview.git
+git clone https://github.com/sta426hs2015/material.git
 
 
 # may need to set these parameters
