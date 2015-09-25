@@ -13,7 +13,7 @@ Monday 11.00-11.45 Y11-J-05
 [Dr. Mark Robinson](http://www.imls.uzh.ch/research/robinson.html), Assistant Professor of Statistical Genomics, [IMLS](http://www.imls.uzh.ch/index.html), UZH
 
 ## Important Links
-[Journal club papers (papers to consider presenting)](https://raw.githubusercontent.com/sta426hs2015/overview/master/reading_list.txt)
+[Journal club papers (papers to consider presenting)](https://raw.githubusercontent.com/sta426hs2015/material/master/reading_list.txt)
 
 ## Links to interesting blogs
 [Simply Statistics](http://simplystatistics.org)  
