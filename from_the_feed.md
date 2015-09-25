@@ -2,6 +2,7 @@
 ## Week 1 - 14 Sep 2015
 
 [The 5 Most Critical Statistical Concepts](http://simplystatistics.org/2013/07/03/repost-the-5-most-critical-statistical-concepts/) 
+
 manipulate data, exploratory data analysis, contextual knowledge, distinguish T from F patterns, communicate
 
 [Use of GitHub in STAT545](http://stat545-ubc.github.io/bit004_stat545-use-of-github.html)
