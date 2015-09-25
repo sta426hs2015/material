@@ -33,10 +33,8 @@ Monday 11.00-11.45 Y11-J-05
 
 
 ## Course material
-[Private repository of course material](https://github.com/sta426hs2015/material)  
-  
-Assuming you have permission, you can check out the materials with the following command:
+
+You can check out the entire set of course materials with the following command:
 ```
 git clone https://github.com/sta426hs2015/material.git
 ```  
-If you are registered in the course but do not have permission, email the lecturers with your github account.
