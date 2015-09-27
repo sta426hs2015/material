@@ -15,7 +15,7 @@ Three unlikely to happen soon: Luxury journals, P-hacking [1], Numbers on job pr
  
 [1] “The basic problem with statistics is that they carry an authority that comes from many people not understanding them. If you know a little bit of statistics it’s easy to fool readers who know less than you. It’s also easy to fool yourself.”
 
-## Week 3 - 21 Sep 2015
+## Week 3 - 28 Sep 2015
 
 [Data Analysis for the Life Sciences - a book completely written in R markdown](http://simplystatistics.org/2015/09/23/data-analysis-for-the-life-sciences-a-book-completely-written-in-r-markdown/) 
 
