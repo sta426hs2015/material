@@ -47,9 +47,8 @@
 
 [1] [https://liorpachter.wordpress.com/seq/](https://liorpachter.wordpress.com/seq/)
 
-## Exercise 3 (Verena Steffen)
-### Chem-Seq [(source)](http://www.nature.com/nbt/journal/v32/n1/pdf/nbt.2776.pdf)
-Chem-Seq is a method to investigate small molecule/DNA interaction. It is used to gain insights ofhow a small molecule (chem. compound) influences cellular functions, for example, it could reveal the action mechanism of a DNA associated (influencing replication, transcription, etc.) drug.
+### Verena Steffen: Chem-Seq [(source)](http://www.nature.com/nbt/journal/v32/n1/pdf/nbt.2776.pdf)
+Chem-Seq is a method to investigate small molecule/DNA interaction. It is used to gain insights of how a small molecule (chem. compound) influences cellular functions, for example, it could reveal the action mechanism of a DNA associated (influencing replication, transcription, etc.) drug.
 The method is similar to ChIP-seq, which measures DNA/protein interactions, but instead of antibodies, chemical compounds are used. 
 
 *(technology -> application -> statistics)*
