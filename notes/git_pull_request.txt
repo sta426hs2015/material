@@ -37,6 +37,8 @@ git merge upstream/master
 # after making changes, commit them to local staging area with message
 git commit -a -m "added this file"
 
-# push changes to online repo (local -> online)
+# push changes to fork
 git push origin master
+
+# submit pull request via browser
 
