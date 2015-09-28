@@ -17,7 +17,7 @@
 ### Goal: 
 #### produce a 1 paragraph summary
 #### links to a few (<5) good resources
-#### submit a pull request to add to week3 repo
+#### submit a pull request to brainstorm_answers.md
 
 # Part 3 - Brainstorm: Applications/protocols in genomics
 
@@ -37,11 +37,14 @@
 
 # Part 5 - Brainstorm: Methods/algorithms/data structures that are associated more to computer science
 
-# Part 6 (if time permits) - Pick another technology (for example, [1]) to briefly describe in terms of the above terms
-### Goal: again, make the link as above
-#### submit a pull request to this file
+# Part 6 - Pick another technology (from those above or from [1]) to briefly describe
+
+## In-class exercise 3 (individually): 
+### Goal: 
+#### write ~2 sentences about what the method does
+#### again, make the link (technology -> application -> statistics)
+#### submit a pull request to brainstorm_answers.md
 
 [1] [https://liorpachter.wordpress.com/seq/](https://liorpachter.wordpress.com/seq/)
 
-## In-class exercise 3 (individually): microarray, Illumina seq, other types of seq
 
