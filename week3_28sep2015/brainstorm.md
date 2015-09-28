@@ -2,7 +2,7 @@
 # Part 1 - Brainstorm: Statistics
 
 ## Distributions
-### Normal, ..
+### e.g., Gaussian, Poisson, ..
 
 ## Statistical Models
 ## Methods for Estimation
@@ -19,25 +19,25 @@
 #### links to a few (<5) good resources
 #### submit a pull request to brainstorm_answers.md
 
-# Part 3 - Brainstorm: Applications/protocols in genomics
+# Part 3 - Brainstorm: Applications/protocols in genomics OR subfields
 
-## gene expression
+### e.g., gene expression
 
 # Part 4 - Brainstorm: Linking Technologies to Applications to Statistics (mainstream)
 
-## e.g., microarray -> gene expression -> normally distributed
+## e.g., microarray -> gene expression -> normally distributed (log intensities)
 
 ## In-class exercise 2 (3 groups): 
 ### Goal: make the link between technologies, what is measured, statistical models used
 ### For example:
-##### sequencing -> gene expression -> ?
-##### sequencing -> DNA methylation -> ?
-##### sequencing -> protein/DNA interactions -> ?
+##### RNA-seq: sequencing -> gene expression -> ?
+##### BS-seq: bisulphite + sequencing -> DNA methylation -> ?
+##### ChIP-seq: sequencing -> protein/DNA interactions -> ?
 
 
 # Part 5 - Brainstorm: Methods/algorithms/data structures that are associated more to computer science
 
-# Part 6 - Pick another technology (from those above or from [1]) to briefly describe
+# Part 6 - Pick another "technology" (from those above or from [1]) to briefly describe
 
 ## In-class exercise 3 (individually): 
 ### Goal: 
