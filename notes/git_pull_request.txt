@@ -1,0 +1,42 @@
+
+# Initiate a fork of the original repository
+# I used the "Fork" button on the top right in a browser window;
+# there is probably a way to do this from the command line
+
+
+# From command line, "check out" the forked repository:
+git clone https://github.com/markrobinsonca/material.git
+
+# Note: this is not my normal github account, so I don't have access to
+# push to the original repo
+
+# https://help.github.com/articles/fork-a-repo/
+
+# a good diagnostic is this
+## IMLS-NBM-MR02:material mark$ git remote -v
+## origin	https://github.com/markrobinsonca/material.git (fetch)
+## origin	https://github.com/markrobinsonca/material.git (push)
+
+# get the "upstream" repo (i.e., the original)
+git remote add upstream https://github.com/sta426hs2015/material
+# same diagnostic now
+##IMLS-NBM-MR02:material mark$ git remote -v
+##origin	https://github.com/markrobinsonca/material.git (fetch)
+##origin	https://github.com/markrobinsonca/material.git (push)
+##upstream	https://github.com/sta426hs2015/material (fetch)
+##upstream	https://github.com/sta426hs2015/material (push)
+
+
+# if needed, refresh your local copy
+# https://help.github.com/articles/syncing-a-fork/
+git fetch upstream
+git checkout master
+git merge upstream/master
+
+
+# after making changes, commit them to local staging area with message
+git commit -a -m "added this file"
+
+# push changes to online repo (local -> online)
+git push origin master
+
