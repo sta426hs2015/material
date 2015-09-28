@@ -19,7 +19,7 @@ Three unlikely to happen soon: Luxury journals, P-hacking [1], Numbers on job pr
 
 ###[Data Analysis for the Life Sciences - a book completely written in R markdown](http://simplystatistics.org/2015/09/23/data-analysis-for-the-life-sciences-a-book-completely-written-in-r-markdown/) 
 
-####The idea of [Leanpub](www.leanpub.com), completely written in R markdown, accompany [git page](https://github.com/genomicsclass/labs)
+####The idea of [Leanpub](www.leanpub.com), completely written in R markdown, accompanying [git page](https://github.com/genomicsclass/labs)
 
 ### [Stories from the GitHub Classroom: Changing Practice, one Pull Request at a Time](https://speakerdeck.com/johndbritton/stories-from-the-github-classroom-changing-practice-one-pull-request-at-a-time)
 
