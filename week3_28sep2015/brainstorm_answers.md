@@ -55,3 +55,12 @@ The method is similar to ChIP-seq, which measures DNA/protein interactions, but 
 
 **Chem-Seq -> small molecule/DNA interactions -> Poisson / Negative Binomial (NB) or zero-inflated NB**
 
+## Natacha Bodenhausen: metagenomics
+Reference: White JR, Nagarajan N, Pop M (2009) Statistical Methods for Detecting Differentially Abundant Features in Clinical Metagenomic Samples. PLoS Comput Biol 5(4): e1000352. doi: 10.1371/journal.pcbi.1000352
+Metagenomics is a method where all the DNA of a particular environment is sequenced. In comparative metagenomics, the goal is to identify features (taxa or biological pathway) which are more abundant in one populations of samples (for example healthy individual) compared to another population of samples (for example sick individuals)
+
+*(technology -> application -> statistics)*
+
+** DNA Sequencing -> Comparative metagenomics -> nonparametric t test (permutation method as described in Storey and Tibshirani )**
+
+
