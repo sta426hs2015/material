@@ -64,13 +64,13 @@ Metagenomics is a method where all the DNA of a particular environment is sequen
 *(technology -> application -> statistics)*
 
 **DNA Sequencing -> Comparative metagenomics -> nonparametric t test (permutation method as described in Storey and Tibshirani)** 
-_______
 
 ### Marisa Silva: PD-Seq
-Reference: Daniel Arango et al., ?Molecular Basis for the Action of a Dietary Flavonoid Revealed by the Comprehensive Identification of Apigenin Human Targets,? Proceedings of the National Academy of Sciences 110, no. 24 (June 11, 2013): E2153?E2162, doi:10.1073/pnas.1303726110.
+Reference: Daniel Arango et al., “Molecular Basis for the Action of a Dietary Flavonoid Revealed by the Comprehensive Identification of Apigenin Human Targets,” Proceedings of the National Academy of Sciences 110, no. 24 (June 11, 2013): E2153–E2162, doi:10.1073/pnas.1303726110.
 
 PD-Seq is a method that allow to understand protein-protein interaction. Phage display has been used to study protein-DNA, protein-protein and protein-peptide interactions. This technic combined with deep sequencing allows the analysis of high complex different interactions.
 
 (technology -> application -> statistics)
-PD-Seq-> small molecule-protein interaction ->  Binomial, Fisher?s exact
-_______
+PD-Seq-> small molecule-protein interaction ->  Binomial, Fisher´s exact
+
+
