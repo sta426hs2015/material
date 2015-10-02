@@ -75,3 +75,13 @@ PD-Seq is a method that allow to understand protein-protein interaction. Phage d
 **PD-Seq-> small molecule-protein interaction ->  Binomial, Fisher's exact**
 
 
+### Stefan Oberlin: GRO-Seq (Global run-on sequencing) [(source)](http://www.sciencemag.org/content/322/5909/1845.short) 
+Reference: Leighton J. Core, Joshua J. Waterfall, John T. Lis: Nascent RNA Sequencing Reveals Widespread Pausing and Divergent Initiation at Human Promoters, Science (2008) 
+ 
+In order to monitor global transcriptional activity, run-on technology was coupled to RNAseq. This technique allowed to generalise the phenomenon of stalled polymerases at the transcriptional start site (TSS) as well as their widespread bidirectional activity. 
+ 
+*(technology -> application -> statistics)* 
+ 
+**GRO-Seq-> transcriptional activity, eg. comparing activity at the TSS to gene body  ->  Fisher's exact**
+
+
