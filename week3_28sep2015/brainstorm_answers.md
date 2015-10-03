@@ -85,3 +85,10 @@ In order to monitor global transcriptional activity, run-on technology was coupl
 **GRO-Seq-> transcriptional activity, eg. comparing activity at the TSS to gene body  ->  Fisher's exact**
 
 
+### Helena Crowell: Bar-Seq [(source)](http://genome.cshlp.org/content/early/2009/07/21/gr.093955.109) 
+Reference: Andrew M. Smith et al., “Quantitative Phenotyping via Deep Barcode Sequencing,” Genome Research (July 21, 2009), doi:10.1101/gr.093955.109.
+
+Barcode Analysis by Sequencing (Bar-Seq) directly compares data obtained from a barcode microarray-based chemogenomic assay, estimating which genes are (un)expressed in a given microarray hybridization, to that of high-throughput sequencing. The method thereby allows for quantitative characterization of complex (strain-)pools, identification of gene–environment interactions on a genome-wide scale, and of drug targets.
+
+*(technology -> application -> statistics)* 
+**Bar-Seq > Phenotyping > Tukey’s HSD post-hoc analysis**
