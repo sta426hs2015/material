@@ -91,4 +91,5 @@ Reference: Andrew M. Smith et al., “Quantitative Phenotyping via Deep Barcode 
 Barcode Analysis by Sequencing (Bar-Seq) directly compares data obtained from a barcode microarray-based chemogenomic assay, estimating which genes are (un)expressed in a given microarray hybridization, to that of high-throughput sequencing. The method thereby allows for quantitative characterization of complex (strain-)pools, identification of gene–environment interactions on a genome-wide scale, and of drug targets.
 
 *(technology -> application -> statistics)* 
+
 **Bar-Seq > Phenotyping > Tukey’s HSD post-hoc analysis**
