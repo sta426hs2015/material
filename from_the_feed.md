@@ -27,6 +27,6 @@ The idea of [Leanpub](www.leanpub.com), completely written in R markdown, accomp
 
 ## Week 4 - 05 Oct 2015
 
-[The unreasonable effectiveness of GitHub browsability](http://stat545-ubc.github.io/bit006_github-browsability-wins.html#readme.md) 
+[The unreasonable effectiveness of GitHub browsability](http://stat545-ubc.github.io/bit006_github-browsability-wins.html) 
 
 [Mission Bay (science publishing) manifesto](http://www.michaeleisen.org/blog/?p=1760) 
