@@ -4,6 +4,8 @@
 
 [Mission Bay (science publishing) manifesto](http://www.michaeleisen.org/blog/?p=1760) 
 
+[The Battle Over Genome Editing Gets Science All Wrong](http://www.wired.com/2015/10/battle-genome-editing-gets-science-wrong/) 
+
 ## Week 3 - 28 Sep 2015
 
 [Data Analysis for the Life Sciences - a book completely written in R markdown](http://simplystatistics.org/2015/09/23/data-analysis-for-the-life-sciences-a-book-completely-written-in-r-markdown/) 
