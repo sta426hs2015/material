@@ -96,7 +96,7 @@ plot( classicalt, col=cols, ylim=c(-10,10), pch=".", main="Classical-t" )
 ```
 
 
-#### Question 6. Pick a reasonable metric to compare the methods: ROC curve, false discovery plot, power versus achieved FDR.  Using this metric/curve, compare the classical t-test (classicalt), the moderated t-test (fit\$t) and the log-fold-change or mean difference (fit\$coef).  Either manually calculate and plot it or use a nice package for it (e.g., [https://rocr.bioinf.mpi-sb.mpg.de/](the ROCR package))  What method(s) perform well?
+#### Question 6. Pick a reasonable metric to compare the methods: ROC curve, false discovery plot, power versus achieved FDR.  Using this metric/curve, compare the classical t-test (classicalt), the moderated t-test (fit\$t) and the log-fold-change or mean difference (fit\$coef).  Either manually calculate and plot it or use a nice package for it (e.g., [https://rocr.bioinf.mpi-sb.mpg.de/](the ROCR package) or [https://github.com/markrobinsonuzh/benchmarkR](benchmarkR package))  What method(s) perform well?
 
 
 
