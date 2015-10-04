@@ -85,3 +85,14 @@ In order to monitor global transcriptional activity, run-on technology was coupl
 **GRO-Seq-> transcriptional activity, eg. comparing activity at the TSS to gene body  ->  Fisher's exact**
 
 
+### Lourdes Rosano: CNV-seq [(source)](http://www.biomedcentral.com/1471-2105/10/80/) 
+Reference: Chao Xie and Martti T. Tammi, “CNV-seq, a New Method to Detect Copy Number Variation Using High-throughput Sequencing,” BMC Bioinformatics 10, no. 1 (March 6, 2009): 80, doi:10.1186/1471-2105-10-80.
+
+CNV-seq is a method to detect CNV (DNA copy number variation) by shotgun sequencing, conceptually derived from aCGH (microarray-based procedure).
+Instead of a microarray, CNV-seq uses two sets of shotgun reads, one from each target individual, which are mapped by sequence alignment on a template genome. A sliding window approach is used to analyze the mapped regions and CNVs are detected by computing the number of reads for each individual in each of the windows, yielding ratios, which are later assessed by the computation of a probability of a random occurrence, given no copy number variation. 
+
+*(technology -> application -> statistics)* 
+
+**CNV-seq-> DNA copy number variation ->  Poisson, standard Gaussian distribution**
+
+
