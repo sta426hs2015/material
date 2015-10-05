@@ -96,3 +96,16 @@ Instead of a microarray, CNV-seq uses two sets of shotgun reads, one from each t
 **CNV-seq-> DNA copy number variation ->  Poisson, standard Gaussian distribution**
 
 
+### Elli Tzini: PARS-Seq 
+[(source)](http://www.nature.com/nature/journal/v467/n7311/abs/nature09322.html)
+
+Reference: Michael Kertesz et al., “Genome-wide Measurement of RNA Secondary Structure in Yeast,” Nature 467, no. 7311 (September 2, 2010): 103–107, doi:10.1038/nature09322.
+
+PARS-Seq (Parallel Analysis of RNA Sequence) is a method where RNA folding stability is measured across the transcriptome.  Genome-wide structural dynamics of RNA can parse functional elements of the transcriptome and reveal diverse biological insights.
+
+
+*(technology -> application -> statistics)* 
+ 
+**PARS-Seq->RNA Structure->PoissonSeq**
+
+
