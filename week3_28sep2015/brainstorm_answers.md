@@ -107,4 +107,13 @@ PARS-Seq (Parallel Analysis of RNA Sequence) is a method where RNA folding stabi
  
 **PARS-Seq->RNA Structure->PoissonSeq**
 
+### Amr Elriedy: PAS-Seq (http://rnajournal.cshlp.org/content/17/4/761.full#sec-9)
 
+Reference:  Shepard PJ, Choi EA, Lu J, Flanagan LA, Hertel KJ, et al. (2011) Complex and dynamic landscape of RNA polyadenylation revealed by PAS-Seq. RNA 17: 761772. doi: 10.1261/rna.2581711.
+
+Pas-Seq (Poly A Site Sequencing) is a sequencing method for identifying Alternative polyadenylation (APA). APA is a universal post transcriptional gene regulation method, which results in a gene to code several RNAs through multiple mechanisms, such as producing mRNAs that code for different proteins isoforms that have various physiological properties, Thus, like alternative splicing. Also, APA produces mRNAs with different 3' UTR end, which directly affect the microRNA activity and interaction with the mRNA.
+
+*(technology -> application -> statistics)*
+
+
+**Pas-Seq -> deep sequencing-based method for  analysis of RNA polyadenylation -> Fisher Exact Test, also chi-square tests or linear trend test can be used**
