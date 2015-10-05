@@ -103,4 +103,4 @@ plot( classicalt, col=cols, ylim=c(-10,10), pch=".", main="Classical-t" )
 #### Question 7.  Explore the performance of these test statistics for a few scenarios.  For example, change the sample size, the number of genes DE, magnitude of the difference, level of variability.  What influence do these parameters have on the relative performance? 
 
 
-#### Note: Submit both an Rmarkdown/markdown file as well as a compiled HTML file to your private github repository.
+#### Note: Submit both an Rmarkdown/markdown file as well as a compiled HTML/PDF file to your private github repository.
