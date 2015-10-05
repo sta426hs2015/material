@@ -66,7 +66,7 @@ Metagenomics is a method where all the DNA of a particular environment is sequen
 **DNA Sequencing -> Comparative metagenomics -> nonparametric t test (permutation method as described in Storey and Tibshirani)** 
 
 ### Marisa Silva: PD-Seq [(source)](http://www.pnas.org/content/110/24/E2153) 
-Reference: Daniel Arango et al., “Molecular Basis for the Action of a Dietary Flavonoid Revealed by the Comprehensive Identification of Apigenin Human Targets,” Proceedings of the National Academy of Sciences 110, no. 24 (June 11, 2013): E2153–E2162, doi:10.1073/pnas.1303726110.
+Reference: Daniel Arango et al., â€œMolecular Basis for the Action of a Dietary Flavonoid Revealed by the Comprehensive Identification of Apigenin Human Targets,â€ Proceedings of the National Academy of Sciences 110, no. 24 (June 11, 2013): E2153â€“E2162, doi:10.1073/pnas.1303726110.
 
 PD-Seq is a method that allow to understand protein-protein interaction. Phage display has been used to study protein-DNA, protein-protein and protein-peptide interactions. This technic combined with deep sequencing allows the analysis of high complex different interactions.
 
@@ -86,7 +86,7 @@ In order to monitor global transcriptional activity, run-on technology was coupl
 
 
 ### Lourdes Rosano: CNV-seq [(source)](http://www.biomedcentral.com/1471-2105/10/80/) 
-Reference: Chao Xie and Martti T. Tammi, “CNV-seq, a New Method to Detect Copy Number Variation Using High-throughput Sequencing,” BMC Bioinformatics 10, no. 1 (March 6, 2009): 80, doi:10.1186/1471-2105-10-80.
+Reference: Chao Xie and Martti T. Tammi, â€œCNV-seq, a New Method to Detect Copy Number Variation Using High-throughput Sequencing,â€ BMC Bioinformatics 10, no. 1 (March 6, 2009): 80, doi:10.1186/1471-2105-10-80.
 
 CNV-seq is a method to detect CNV (DNA copy number variation) by shotgun sequencing, conceptually derived from aCGH (microarray-based procedure).
 Instead of a microarray, CNV-seq uses two sets of shotgun reads, one from each target individual, which are mapped by sequence alignment on a template genome. A sliding window approach is used to analyze the mapped regions and CNVs are detected by computing the number of reads for each individual in each of the windows, yielding ratios, which are later assessed by the computation of a probability of a random occurrence, given no copy number variation. 
@@ -96,10 +96,9 @@ Instead of a microarray, CNV-seq uses two sets of shotgun reads, one from each t
 **CNV-seq-> DNA copy number variation ->  Poisson, standard Gaussian distribution**
 
 
-### Elli Tzini: PARS-Seq 
-[(source)](http://www.nature.com/nature/journal/v467/n7311/abs/nature09322.html)
+### Elli Tzini: PARS-Seq [(source)](http://www.nature.com/nature/journal/v467/n7311/abs/nature09322.html) 
 
-Reference: Michael Kertesz et al., �Genome-wide Measurement of RNA Secondary Structure in Yeast,� Nature 467, no. 7311 (September 2, 2010): 103�107, doi:10.1038/nature09322.
+Reference: Michael Kertesz et al., “Genome-wide Measurement of RNA Secondary Structure in Yeast,” Nature 467, no. 7311 (September 2, 2010): 103–107, doi:10.1038/nature09322.
 
 PARS-Seq (Parallel Analysis of RNA Sequence) is a method where RNA folding stability is measured across the transcriptome.  Genome-wide structural dynamics of RNA can parse functional elements of the transcriptome and reveal diverse biological insights.
 
