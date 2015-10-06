@@ -1,4 +1,4 @@
-
+﻿
 # Part 1 - Brainstorm: Statistics
 
 ## Distributions
@@ -128,4 +128,13 @@ Barcode Analysis by Sequencing (Bar-Seq) directly compares data obtained from a 
 *(technology -> application -> statistics)*
 
 **Bar-Seq > Phenotyping > Tukey’s HSD post-hoc analysis**
+
+### Lucas Armbrecht: Microarray (Affymetrix) [(source)](http://www.affymetrix.com/estore/browse/level_one_category_template_one.jsp?parent=35796&category=35796)
+The Affymetrix SNP Array 6.0 consists out of 1.8 million genetic markers on a single chip (>900k single nucleotide polymorphisms and >900k probes for the detection of the copy number). It is used to identify single nucleotide polymorphisms (changes of single nucleotides in the DNA) in the human genome. These SNPs are being assiotiated with different diseases like cancer, CNS disorders, Cardiovascular or other disorders.
+A detailled list on publications can be found [(here)](http://media.affymetrix.com/support/technical/other/snp6_array_publications.pdf).
+
+*(technology -> application -> statistics)*
+
+**Affimetrix Genome-Wide Human SNP Array -> SNP detection -> Moderated t-test / Gaussian (log intensities) / in house: The Axiom GT1 algorithm / The Birdseed Algorithm / ... [(link)](http://www.affymetrix.com/estore/browse/staticHtmlContentTemplate.jsp?staticHtmlMediaId=m811198&isHtmlStatic=true&navMode=35810&aId=productsNav)**
+
 
