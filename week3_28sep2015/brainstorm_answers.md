@@ -66,7 +66,7 @@ Metagenomics is a method where all the DNA of a particular environment is sequen
 **DNA Sequencing -> Comparative metagenomics -> nonparametric t test (permutation method as described in Storey and Tibshirani)** 
 
 ### Marisa Silva: PD-Seq [(source)](http://www.pnas.org/content/110/24/E2153) 
-Reference: Daniel Arango et al., â€œMolecular Basis for the Action of a Dietary Flavonoid Revealed by the Comprehensive Identification of Apigenin Human Targets,â€ Proceedings of the National Academy of Sciences 110, no. 24 (June 11, 2013): E2153â€“E2162, doi:10.1073/pnas.1303726110.
+Reference: Daniel Arango et al., Molecular Basis for the Action of a Dietary Flavonoid Revealed by the Comprehensive Identification of Apigenin Human Targets. Proceedings of the National Academy of Sciences 110, no. 24 (June 11, 2013): E2153-E2162, doi:10.1073/pnas.1303726110.
 
 PD-Seq is a method that allow to understand protein-protein interaction. Phage display has been used to study protein-DNA, protein-protein and protein-peptide interactions. This technic combined with deep sequencing allows the analysis of high complex different interactions.
 
@@ -117,3 +117,15 @@ Pas-Seq (Poly A Site Sequencing) is a sequencing method for identifying Alternat
 *(technology -> application -> statistics)*
 
 **Pas-Seq -> deep sequencing-based method for  analysis of RNA polyadenylation -> Fisher Exact Test, also chi-square tests or linear trend test can be used**
+
+
+### Helena Crowell: Bar-Seq [(source)](http://genome.cshlp.org/content/early/2009/07/21/gr.093955.109) 
+
+Reference: Andrew M. Smith et al., “Quantitative Phenotyping via Deep Barcode Sequencing,” Genome Research (July 21, 2009), doi:10.1101/gr.093955.109.
+
+Barcode Analysis by Sequencing (Bar-Seq) directly compares data obtained from a barcode microarray-based chemogenomic assay, estimating which genes are (un)expressed in a given microarray hybridization, to that of high-throughput sequencing. The method thereby allows for quantitative characterization of complex (strain-)pools, identification of gene–environment interactions on a genome-wide scale, and of drug targets.
+
+*(technology -> application -> statistics)*
+
+**Bar-Seq > Phenotyping > Tukey’s HSD post-hoc analysis**
+
