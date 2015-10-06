@@ -108,7 +108,7 @@ PARS-Seq (Parallel Analysis of RNA Sequence) is a method where RNA folding stabi
 **PARS-Seq->RNA Structure->PoissonSeq** 
 
 
-### Amr Elriedy: PAS-Seq [source](http://rnajournal.cshlp.org/content/17/4/761.full#sec-9) 
+### Amr Elriedy: PAS-Seq [(source)](http://rnajournal.cshlp.org/content/17/4/761.full#sec-9) 
 
 Reference:  Shepard PJ, Choi EA, Lu J, Flanagan LA, Hertel KJ, et al. (2011) Complex and dynamic landscape of RNA polyadenylation revealed by PAS-Seq. RNA 17: 761772. doi: 10.1261/rna.2581711.
 
