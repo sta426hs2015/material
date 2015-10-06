@@ -1,4 +1,4 @@
-﻿
+
 # Part 1 - Brainstorm: Statistics
 
 ## Distributions
@@ -138,3 +138,12 @@ A detailled list on publications can be found [(here)](http://media.affymetrix.c
 **Affimetrix Genome-Wide Human SNP Array -> SNP detection -> Moderated t-test / Gaussian (log intensities) / in house: The Axiom GT1 algorithm / The Birdseed Algorithm / ... [(link)](http://www.affymetrix.com/estore/browse/staticHtmlContentTemplate.jsp?staticHtmlMediaId=m811198&isHtmlStatic=true&navMode=35810&aId=productsNav)**
 
 
+### Mattia Molinaro: gene prediction [(source)](http://bioinformatics.oxfordjournals.org/content/19/suppl_2/ii215.full.pdf+html)
+
+Reference: M. Stanke, S. Waack (2003) Gene prediction with a hidden Markov model and a new intron submodel. Bioinformatics 19 (suppl. 2)
+
+Previous proposed algorithms aimed at finding specific genes in eukaryotic DNA sequences presented unsatisfactory prediction rates in longer genomic sequences. The hidden Markov chain model AUGUSTUS is introduced in order to address this shortcoming and is compared agains other approaches discussed in the literature, showing consistently better efficiency.
+
+*(technology -> application -> statistics)*
+
+**DNA sequencing > gene prediction > hidden Markov chain(s)**
