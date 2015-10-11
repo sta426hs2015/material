@@ -1,5 +1,7 @@
 ## Week 5 - 12 Oct 2015
 
+[How scientists fool themselves – and how they can stop](http://www.nature.com/news/how-scientists-fool-themselves-and-how-they-can-stop-1.18517) 
+
 [Survey on Bioinformatics](https://docs.google.com/forms/d/10P299OB_cfwC7zyTBAdddo1Wh9py_vUGcTy-yczQoTU/viewanalytics) 
 
 [A statistical "gotcha" regarding gay gene tabloid hype](http://andrewgelman.com/2015/10/10/gay-gene-tabloid-hype-update/) 
