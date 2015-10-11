@@ -1,3 +1,10 @@
+## Week 5 - 12 Oct 2015
+
+[https://docs.google.com/forms/d/10P299OB_cfwC7zyTBAdddo1Wh9py_vUGcTy-yczQoTU/viewanalytics](Survey on Bioinformatics) 
+
+[http://andrewgelman.com/2015/10/10/gay-gene-tabloid-hype-update/](A statistical "gotcha" regarding gay gene tabloid hype) 
+
+
 ## Week 4 - 05 Oct 2015
 
 [The unreasonable effectiveness of GitHub browsability](http://stat545-ubc.github.io/bit006_github-browsability-wins.html) 
