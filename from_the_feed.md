@@ -1,8 +1,8 @@
 ## Week 5 - 12 Oct 2015
 
-[https://docs.google.com/forms/d/10P299OB_cfwC7zyTBAdddo1Wh9py_vUGcTy-yczQoTU/viewanalytics](Survey on Bioinformatics) 
+[Survey on Bioinformatics](https://docs.google.com/forms/d/10P299OB_cfwC7zyTBAdddo1Wh9py_vUGcTy-yczQoTU/viewanalytics) 
 
-[http://andrewgelman.com/2015/10/10/gay-gene-tabloid-hype-update/](A statistical "gotcha" regarding gay gene tabloid hype) 
+[A statistical "gotcha" regarding gay gene tabloid hype](http://andrewgelman.com/2015/10/10/gay-gene-tabloid-hype-update/) 
 
 
 ## Week 4 - 05 Oct 2015
