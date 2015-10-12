@@ -101,39 +101,4 @@ Important side note: if you experiment is sufficiently simple (e.g., a 1-way des
  
 #### Question 3. Try to reproduce the above limma modeling using an **alternative design matrix** (remember, it's the combination of a design matrix and a contrast matrix).  Hint: use the experimental factors defined in the 'targets' data frame.
 
-
-Now, let us take a step back to see the "summarization" step of RMA starting from the raw "probe-level" data (i.e., multiple measurements per genes).  We will try and re-create the summaries using a robust linear regression.
-
-These next two sections are just for your information.  We will not dig deeper into the specifics, but the details of RMA were briefly discussed in lectures.  RMA encompasses 3 steps: background correction, (quantile) normalization, summarization.
-
-```{r}
-pm <- probes(abatch,"pm")             # PM (perfect match) intensities
-pm.bg <- rma.background.correct(pm)   # normexp BG correction
-pm.bg.n <- normalize.quantiles(pm.bg) # quantile normalization
-
-colnames(pm.bg) <- colnames(pm.bg.n) <- colnames(pm)
-rownames(pm.bg) <- rownames(pm.bg.n) <- rownames(pm)
-```
-
-The next plots show how the data changes through normalization. Note: this is not exactly the same implementation as rma() function used above, but it is very similar:
- 
-```{r warning=FALSE, message=FALSE}
-par(mfrow=c(1,3))
-boxplot(as.data.frame(log2(pm)),las=2,main="unnormalized")
-boxplot(as.data.frame(log2(pm.bg)),las=2,main="BG corrected")
-boxplot(as.data.frame(log2(pm.bg.n)),las=2,main="BG + Quantile Norm")
-```
-
-Study the code below on how to extract the *probe-level* data for a single gene, "39642_at" from the background-adjusted, normalized probe-level data.
-
-```{r}
-# extracting probe-level data for 1 probeset (by name)
-w <- grep("^39642_at",rownames(pm.bg.n))
-x <- log2( pm.bg.n[w,] ) 
-
-matplot(x, type="l", lty=1, lwd=4, col=f) # probe-level data
-```
-
-#### Question 4.  Pick a different (differentially expressed) gene, create a matrix 'x' as above and fit the RMA linear model using the median polish (see ?medpolish) algorithm.  Plot the decomposition of probe-level data into "chip" effects, "probe" effects and residuals (e.g. a 4-panel figure, like that shown in lectures).  Compare your "chip" effect estimates to those used in the limma analysis above.
-
 #### Note: Submit both an Rmarkdown/markdown file as well as a compiled HTML file to your private github repository.
