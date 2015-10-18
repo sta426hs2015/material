@@ -1,4 +1,4 @@
-## Week 5 - 12 Oct 2015
+## Week 6 - 19 Oct 2015
 
 [New paper: Single-cell ChIP-seq reveals cell subpopulations defined by chromatin state](http://www.nature.com/nbt/journal/vaop/ncurrent/full/nbt.3383.html) 
 
