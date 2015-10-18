@@ -1,5 +1,11 @@
 ## Week 5 - 12 Oct 2015
 
+[http://www.nature.com/nbt/journal/vaop/ncurrent/full/nbt.3383.html](New paper: Single-cell ChIP-seq reveals cell subpopulations defined by chromatin state) 
+
+[http://mbio.asm.org/content/6/5/e01593-15.full](Impacted Science: Impact Is Not Importance): "The many criticisms of the IF seem to have no effect on its inappropriate use" 
+
+## Week 5 - 12 Oct 2015
+
 [How scientists fool themselves – and how they can stop](http://www.nature.com/news/how-scientists-fool-themselves-and-how-they-can-stop-1.18517) 
 
 [Survey on Bioinformatics](https://docs.google.com/forms/d/10P299OB_cfwC7zyTBAdddo1Wh9py_vUGcTy-yczQoTU/viewanalytics)
