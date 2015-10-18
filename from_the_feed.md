@@ -2,7 +2,7 @@
 
 [http://www.nature.com/nbt/journal/vaop/ncurrent/full/nbt.3383.html](New paper: Single-cell ChIP-seq reveals cell subpopulations defined by chromatin state) 
 
-[http://mbio.asm.org/content/6/5/e01593-15.full](Impacted Science: Impact Is Not Importance): "The many criticisms of the IF seem to have no effect on its inappropriate use" 
+[http://mbio.asm.org/content/6/5/e01593-15.full](Impacted Science: Impact Is Not Importance): ".. The many criticisms of the Impact Factor seem to have no effect on its inappropriate use .." 
 
 ## Week 5 - 12 Oct 2015
 
