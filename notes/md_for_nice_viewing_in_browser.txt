@@ -1,0 +1,7 @@
+
+Making an MD file for nice visualization in the browser:
+
+knitr::knit("exercise6a.Rmd")
+
+--> this creates an .md file, possibly also a 'figure' 
+    directory with the output plots
