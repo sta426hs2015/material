@@ -1,3 +1,9 @@
+## Week 6 - 19 Oct 2015
+
+[New paper: Single-cell ChIP-seq reveals cell subpopulations defined by chromatin state](http://www.nature.com/nbt/journal/vaop/ncurrent/full/nbt.3383.html) 
+
+[Impacted Science: Impact Is Not Importance](http://mbio.asm.org/content/6/5/e01593-15.full): ".. The many criticisms of the Impact Factor seem to have no effect on its inappropriate use .." 
+
 ## Week 5 - 12 Oct 2015
 
 [How scientists fool themselves – and how they can stop](http://www.nature.com/news/how-scientists-fool-themselves-and-how-they-can-stop-1.18517) 
