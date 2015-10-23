@@ -1,0 +1,139 @@
+---
+title: "Solution to Excercise 20150921"
+output: html_document
+---
+
+# Introduction
+
+Affy microarray study to analyse liver disease.
+
+# Loading the data
+
+```{r}
+setwd("~/Courses/BiostatLecture-2015/git-material/week2_21sep2015/exercise/")
+  anno = read.table("SampleAnnotation.txt", as.is=TRUE, sep="\t", quote="",
+                    row.names=1, header=TRUE)
+```
+
+Define sample name and colors
+
+```{r}
+samples = rownames(anno)
+colors = rainbow(nrow(anno))
+```
+
+Define indicator variables
+
+```{r}
+isNorm = anno$TissueType == "norm"
+isSick = anno$TissueType == "sick"
+isAcute = anno$TissueType == "acute"
+```
+Load expression data
+```{r}
+x = read.table("expressiondata.txt", as.is=TRUE, sep="\t", quote="", row.names=1, header=TRUE, check.names = FALSE)
+x = as.matrix(x)
+```
+
+Qualitatively compare the expression values of the first two samples
+```{r}
+par(pty="s")
+plot(x[ , "norm-02"], x[, "norm-05"], log="xy", pch=20)
+abline(0, 1, col="blue")
+abline(log10(2), 1, col="blue", lty=2)
+abline(-log10(2), 1, col="blue", lty=2)
+```
+
+
+# Checking the  distribution of the intensities
+
+```{r}
+par(mar=c(8, 4.1, 4.1, 2.1))
+boxplot(log2(x), las=2, ylab="log2 expression")
+```
+
+# Checking the consistency of the replicates
+
+```{r}
+corrMatrix = cor(x)
+signif(corrMatrix, digits=3)
+```
+
+Visualize the correlation matrix
+```{r}
+par(mar=c(8,8,2,2), pty="s")
+grayScale <- gray((1:256)/256)
+image(corrMatrix, col=grayScale,  axes=FALSE)
+axis(1, at=seq(from=0, to=1, length.out=length(samples)), labels=samples, las=2)
+axis(2, at=seq(from=0, to=1, length.out=length(samples)), labels=samples, las=2)
+```
+
+The correlation plot shows
+
+* normals show high correlation among each other
+* the normal are very different from both sick and acute
+* the sick and acute are rather similar
+* `sick-14` rather looks like a normal sample
+* `sick-15` has overall low correlation but rather looks like an "acute"
+* `acute-04-a` which is a technical replicate of `acute-04` is more similar to `sick-04` than to `acute-04`.
+
+
+# Sample Clustering
+
+The sample clustering shows the similarities of the expression patterns of the
+samples in a tree. In order to compute the similarities of the samples one
+can use all genes or only a subset of the genes. When using all genes where
+is the risk that the absent genes drive the clustering of the samples. This is
+because in many studies the absent genes make up the majority of the
+measured genes. But those genes have a low intensity that is strongly influenced by
+the background signal measured on each chip and not by real gene expression
+
+```{r}
+x.sd = apply(x, 1, sd, na.rm=TRUE)
+ord = order(x.sd, decreasing=TRUE)
+highVarGenes = ord[1:500]
+par(mfrow=c(1,2));
+d = as.dist(1-cor(x));
+c=hclust(d, method="ward.D2");
+plot(c, hang=-0.1, main="all genes", xlab="")
+
+d = as.dist(1-cor(x[highVarGenes, ]));
+c=hclust(d, method="ward.D2");
+plot(c, hang=-0.1, main="high variance genes", xlab="")
+```
+
+If we run the clustering without sample \texttt{sick-04}, the \texttt{acute-04}
+does no longer cluster in the branch with the other sick samples
+```{r}
+sub = x[ , samples != "sick-04"]
+d = as.dist(1-cor(sub));
+c=hclust(d, method="ward.D2");
+plot(c, hang=-0.1, main="all genes", xlab="")
+```
+
+# Quantile normalization
+
+```{r}
+require(limma)
+xNorm = normalizeQuantiles(x)
+plotDensities(log2(x), legend = "topright", main="before quantile normalation")
+
+plotDensities(log2(xNorm), legend = "topright", main="quantile normalized")
+```
+
+
+# Multi-dimensional scaling and Principal component analysis
+
+```{r}
+dScaled <- cmdscale(d)
+plot(dScaled, main="multi-dimensional scaling")
+text(dScaled[ ,1],  dScaled[ ,2],labels =rownames(dScaled), pos=1, cex=0.7)
+```
+
+We are interested in the principle components for the samples that's why we do transpose the matrix so that samples are in rows.
+
+```{r}
+pca <- prcomp(t(log2(x)))
+summary(pca)
+```
+
