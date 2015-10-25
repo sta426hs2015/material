@@ -1,3 +1,9 @@
+## Week 7 - 26 Oct 2015
+
+[TED Talk: We can now edit our DNA. But let's do it wisely](http://www.ted.com/talks/jennifer_doudna_we_can_now_edit_our_dna_but_let_s_do_it_wisely) 
+
+[Bayesian, Likelihood, and Frequentist Approaches to Statistics: A comparison of methods](http://www.appliedclinicaltrialsonline.com/bayesian-likelihood-and-frequentist-approaches-statistics-0): "Statistics on the other hand is a human science. The state of nature has been declared and given, but we don't know what it is. All we can do is observe the consequences and try and divine the rules that govern our existence." 
+
 ## Week 6 - 19 Oct 2015
 
 [New paper: Single-cell ChIP-seq reveals cell subpopulations defined by chromatin state](http://www.nature.com/nbt/journal/vaop/ncurrent/full/nbt.3383.html) 
