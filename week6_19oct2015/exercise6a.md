@@ -52,6 +52,13 @@ These next two sections are just for your information.  We will not dig deeper i
 
 ```r
 pm <- probes(abatch,"pm")             # PM (perfect match) intensities
+```
+
+```
+## Creating a generic function for 'nchar' from package 'base' in package 'S4Vectors'
+```
+
+```r
 pm.bg <- rma.background.correct(pm)   # normexp BG correction
 pm.bg.n <- normalize.quantiles(pm.bg) # quantile normalization
 
@@ -84,4 +91,4 @@ matplot(x, type="l", lty=1, lwd=4, col=f) # probe-level data
 
 ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
 
-#### Question 1.  Pick a different (differentially expressed) gene, create a matrix 'x' as above and fit the RMA linear model using the median polish (see ?medpolish) or rlm (see ?rlm; MASS package) algorithm.  Plot the decomposition of probe-level data into "chip" effects, "probe" effects and residuals (e.g. a 4-panel figure, like that shown in lectures).  Compare your "chip" effect estimates -- i.e., summarized values that come from the exprs() command -- to those used in the limma analysis from Exercise 5.
+#### Question 1.  Pick a different (differentially expressed) gene, create a matrix 'x' as above and fit the RMA linear model using the median polish (see ?medpolish) or rlm (see ?rlm; MASS package) algorithm.  Plot the decomposition of probe-level data into "chip" effects, "probe" effects and residuals (e.g. a 4-panel figure, like that shown in lectures).  Compare your "chip" effect estimates to those used in the limma analysis from Exercise 5 -- corresponding row from exprs(eset).
