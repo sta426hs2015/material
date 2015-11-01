@@ -1,3 +1,8 @@
+## Week 8 - 2 Nov 2015
+
+[Accelerating scientific publication in biology](http://www.pnas.org/content/early/2015/10/26/1511912112.full.pdf): "creating
+new outlets for faster and more nimble scientific communication could have positive outcomes on professional training, catalyzing scientific progress, and improving the culture of communication within the life sciences as a whole." 
+
 ## Week 7 - 26 Oct 2015
 
 [TED Talk: We can now edit our DNA. But let's do it wisely](http://www.ted.com/talks/jennifer_doudna_we_can_now_edit_our_dna_but_let_s_do_it_wisely) 
