@@ -99,7 +99,7 @@ samtools view STAR_mapped_s.bam | more
 How many alignments were recorded in the SAM/BAM file?  And, how many unique reads have alignments?
 
 
-#### Part 3: Assuming the creation of the BAM worked fine, it is generally useful to visualize the mapped reads in a genome browser.  For this, you can follow these steps:
+#### Part 3: Assuming the creation of the BAM worked fine, it is generally useful to visualize the mapped reads in a genome browser, such as [IGV](https://www.broadinstitute.org/igv/).  For IGV, you can follow these steps:
 
 Genomes .. Load Genome from File .. select hs_ch19_subset.fa (for "genome") 
 
@@ -107,7 +107,7 @@ File .. Load from File .. [select sorted, indexed BAM file] (for mapped reads)
 
 File .. Load from File .. [select chr19_rescaled.gtf]  (for annotation) 
 
-Create a screenshot of a gene that attracts some reads.
+Create a screenshot of a gene that attracted reads.
 
 
 #### Part 4: Reading the mapped reads in R
