@@ -14,7 +14,7 @@ RSEM_CALCULATE = "/usr/local/ngseq/src/RSEM-1.2.22/rsem-calculate-expression"
 ```
 
 Define the directory where input and output data should be generated.
-```{r, eval=FALSE}
+```{r, eval=TRUE}
 dataDir = "/srv/GT/analysis/hubert/lecture/lecture-2015"
 setwd(dataDir)
 sampleNames = c("N1", "N2", "N3", "T1", "T2", "T3")
@@ -22,6 +22,14 @@ genomeFastaFile = "anno/genome.fa"
 gtfFile = "anno/transcripts.gtf"
 starIndexDir = "starIndex"
 ```
+
+The data set consists for 3 Normal samples and 3 Treated samples with 2.5 Mio reads each. The reads are simulated to come from genes on the human chromosome 1. The file genome.fa contans that chromosome sequence. The file transcripts.gtf contaisn the gene coordinates.
+
+```{r}
+#list.files("FASTQ")
+system(paste0("ls -lh ", dataDir, "/", "FASTQ"), intern = TRUE)
+```
+
 
 # Use STAR and featureCounts to count number of reads per gene
 

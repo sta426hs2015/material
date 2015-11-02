@@ -78,6 +78,22 @@ sampleNames = c(&quot;N1&quot;, &quot;N2&quot;, &quot;N3&quot;, &quot;T1&quot;, 
 genomeFastaFile = &quot;anno/genome.fa&quot;
 gtfFile = &quot;anno/transcripts.gtf&quot;
 starIndexDir = &quot;starIndex&quot;</code></pre>
+<p>The data set consists for 3 Normal samples and 3 Treated samples with 2.5 Mio reads each. The reads are simulated to come from genes on the human chromosome 1. The file genome.fa contans that chromosome sequence. The file transcripts.gtf contaisn the gene coordinates.</p>
+<pre class="r"><code>#list.files(&quot;FASTQ&quot;)
+system(paste0(&quot;ls -lh &quot;, dataDir, &quot;/&quot;, &quot;FASTQ&quot;), intern = TRUE)</code></pre>
+<pre><code>##  [1] &quot;total 3.0G&quot;                                                   
+##  [2] &quot;-rw-r--r-- 1 hubert SG_Employees 253M Oct 27 15:14 N1_1.fq.gz&quot;
+##  [3] &quot;-rw-r--r-- 1 hubert SG_Employees 253M Oct 27 15:14 N1_2.fq.gz&quot;
+##  [4] &quot;-rw-r--r-- 1 hubert SG_Employees 254M Oct 27 15:15 N2_1.fq.gz&quot;
+##  [5] &quot;-rw-r--r-- 1 hubert SG_Employees 254M Oct 27 15:15 N2_2.fq.gz&quot;
+##  [6] &quot;-rw-r--r-- 1 hubert SG_Employees 254M Oct 27 15:15 N3_1.fq.gz&quot;
+##  [7] &quot;-rw-r--r-- 1 hubert SG_Employees 254M Oct 27 15:15 N3_2.fq.gz&quot;
+##  [8] &quot;-rw-r--r-- 1 hubert SG_Employees 253M Oct 27 15:14 T1_1.fq.gz&quot;
+##  [9] &quot;-rw-r--r-- 1 hubert SG_Employees 253M Oct 27 15:14 T1_2.fq.gz&quot;
+## [10] &quot;-rw-r--r-- 1 hubert SG_Employees 253M Oct 27 15:14 T2_1.fq.gz&quot;
+## [11] &quot;-rw-r--r-- 1 hubert SG_Employees 253M Oct 27 15:15 T2_2.fq.gz&quot;
+## [12] &quot;-rw-r--r-- 1 hubert SG_Employees 253M Oct 27 15:14 T3_1.fq.gz&quot;
+## [13] &quot;-rw-r--r-- 1 hubert SG_Employees 253M Oct 27 15:14 T3_2.fq.gz&quot;</code></pre>
 </div>
 <div id="use-star-and-featurecounts-to-count-number-of-reads-per-gene" class="section level1">
 <h1>Use STAR and featureCounts to count number of reads per gene</h1>
