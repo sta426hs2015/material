@@ -1,0 +1,132 @@
+---
+title: "Expression Quantification"
+output: html_document
+---
+  
+# Set up the environment
+
+Define where the installed tools can be found. Adapt this to your installation
+```{r}
+STAR = "/usr/local/ngseq/src/STAR-STAR_2.4.2a/bin/Linux_x86_64/STAR"
+SAMTOOLS = "/usr/local/ngseq/bin/samtools"
+RSEM_PREPAPRE_REF = "/usr/local/ngseq/src/RSEM-1.2.22/rsem-prepare-reference"
+RSEM_CALCULATE = "/usr/local/ngseq/src/RSEM-1.2.22/rsem-calculate-expression"
+```
+
+Define the directory where input and output data should be generated.
+```{r, eval=FALSE}
+dataDir = "/srv/GT/analysis/hubert/lecture/lecture-2015"
+setwd(dataDir)
+sampleNames = c("N1", "N2", "N3", "T1", "T2", "T3")
+genomeFastaFile = "anno/genome.fa"
+gtfFile = "anno/transcripts.gtf"
+starIndexDir = "starIndex"
+```
+
+# Use STAR and featureCounts to count number of reads per gene
+
+Create the STAR index
+```{r, eval=FALSE}
+dir.create(starIndexDir)
+cmd = paste(STAR, " --runMode genomeGenerate",
+ "--genomeDir", starIndexDir,
+ "--genomeFastaFiles", genomeFastaFile,
+ "--sjdbGTFfile", gtfFile, 
+ "--runThreadN", 4)
+system(cmd)
+```
+
+Define input and output files
+```{r, eval=FALSE}
+r1Files = paste0("FASTQ", "/", sampleNames, "_1.fq.gz")
+r2Files = paste0("FASTQ", "/", sampleNames, "_2.fq.gz")
+stopifnot(file.exists(r1Files))
+stopifnot(file.exists(r2Files))
+dir.create("STAR_mapped")
+bamFiles = paste0("STAR_mapped", "/", sampleNames, ".bam")
+```
+
+Actual alignment run
+```{r, eval=FALSE}
+for (i in 1:length(sampleNames)){
+  message(sampleNames[i])
+  cmd = paste(STAR, "--genomeDir", starIndexDir,
+              "--readFilesIn", r1Files[i], r2Files[i],
+              "--readFilesCommand", "zcat",
+              "--runThreadN", 16,
+              "--outSAMtype BAM Unsorted")
+  message(cmd)
+  returnValue = system(cmd)
+  stopifnot(returnValue == 0) ## only if returnValue is 0, the system cmd was successful
+  cmd = paste(SAMTOOLS, "sort", "-m 2000M", "Aligned.out.bam", sub(".bam$", "", bamFiles[i]))
+  returnValue = system(cmd)
+  cmd = paste(SAMTOOLS, "index", bamFiles[i])
+  returnValue = system(cmd)
+}
+```
+
+
+# Create the featureCount table
+
+We use the library subread to generate the counts
+```{r, eval=FALSE}
+dir.create("STAR_featureCounts")
+library(Rsubread)
+
+countResult1 = featureCounts(bamFiles, annot.ext=gtfFile, isGTFAnnotationFile=TRUE, isPairedEnd=TRUE, strandSpecific=0,
+                                 GTF.featureType="exon", GTF.attrType="gene_id", useMetaFeatures=TRUE,
+                                 allowMultiOverlap=TRUE, nthreads=16)
+save(countResult1, file="countResult1.RData")
+countResult2 = featureCounts(bamFiles, annot.ext=gtfFile, isGTFAnnotationFile=TRUE, isPairedEnd=TRUE, strandSpecific=0,
+                                 GTF.featureType="exon", GTF.attrType="gene_id", useMetaFeatures=TRUE,
+                                 allowMultiOverlap=TRUE, countMultiMappingReads=TRUE, fraction=TRUE, nthreads=16)
+save(countResult2, file="countResult2.RData")
+```
+
+
+# Expression quantification with RSEM
+
+Build the index for RSEM
+
+```{r, eval=FALSE}
+dir.create("rsemIndex")
+rsemIndex = "rsemIndex/human"
+cmd = paste(RSEM_PREPAPRE_REF,
+            "--gtf", gtfFile,
+            "--star", "--star-path", dirname(STAR),
+            "-p", 8,
+            genomeFastaFile,
+            rsemIndex)
+system(cmd)
+```
+
+Generate the expression estimates
+
+```{r, eval=FALSE}
+dir.create("RSEM_counts")
+
+i = 1
+countBasenames = paste0("RSEM_counts", "/", sampleNames)
+for (i in 1:length(sampleNames)){
+  message(sampleNames[i])
+  cmd = paste(RSEM_CALCULATE,
+              "--star", "--star-path", dirname(STAR),
+              "-p", 16,
+              "--calc-pme", "--calc-ci",
+              "--gzipped-read-file",
+              "--paired-end", r1Files[i], r2Files[i],
+              rsemIndex,
+              countBasenames[i])
+  system(cmd)
+}
+
+```
+
+
+## Exercises
+
+1. Depending on the featureCount mode, how many alignments are ignored during counting?  
+2. Compare the counts from featureCounts with the genelevel counts from RSEM. Describe the differences. Compute the correlation.  
+3. How does the sum of the counts in RSEM compare to the number of the aligned reads?  
+4. Compute pair-wise correlation of the samples based on the isoform counts and gene level counts
+
