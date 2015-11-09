@@ -1,5 +1,7 @@
 ## Week 9 - 9 Nov 2015
 
+[Road-testing Kallisto](https://cgatoxford.wordpress.com/2015/10/12/road-testing-kallisto/): "Figure 8. Transcripts with more unique kmers have a better correlation between ground truth and Kallisto estimates"
+
 [Practical impacts of genomic data “cleaning” on biological discovery using surrogate variable analysis](http://www.biomedcentral.com/1471-2105/16/372): "the consequences of “batch” correction for biological discovery" 
 
 ## Week 8 - 2 Nov 2015
