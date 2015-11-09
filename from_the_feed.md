@@ -1,3 +1,7 @@
+## Week 9 - 9 Nov 2015
+
+[Practical impacts of genomic data “cleaning” on biological discovery using surrogate variable analysis](http://www.biomedcentral.com/1471-2105/16/372): "the consequences of “batch” correction for biological discovery" 
+
 ## Week 8 - 2 Nov 2015
 
 [Accelerating scientific publication in biology](http://www.pnas.org/content/early/2015/10/26/1511912112.full.pdf): "creating
