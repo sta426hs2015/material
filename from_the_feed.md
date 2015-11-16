@@ -1,3 +1,8 @@
+## Week 10 - 16 Nov 2015
+
+[You’ve been doing your RNA-Seq all wrong](http://www.rna-seqblog.com/youve-been-doing-your-rna-seq-all-wrong/): "This investigation discourages the use of ‘union exons’-based approach in gene quantification despite its simplicity." .. [Union Exon Based Approach for RNA-Seq Gene Quantification: To Be or Not to Be? / PLoS ONE](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0141910)
+
+
 ## Week 9 - 9 Nov 2015
 
 [Road-testing Kallisto](https://cgatoxford.wordpress.com/2015/10/12/road-testing-kallisto/): "Figure 8. Transcripts with more unique kmers have a better correlation between ground truth and Kallisto estimates"
