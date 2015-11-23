@@ -1,0 +1,85 @@
+---
+title: "Excercise 20151123"
+output: html_document
+---
+
+# Gene Set Analysis
+
+We need the following packages
+```{r}
+library(goseq)
+library(edgeR)
+library(limma)
+library(org.Dm.eg.db)
+```
+
+We load the same count data as in the previous exercises
+
+```{r}
+
+samples <- read.table("samples.txt", header=TRUE,
+                      row.names=5, stringsAsFactors=FALSE)
+samples
+counts <- readDGE(samples$countfile)$counts
+```
+
+# Loading gene annotations and category information
+
+```{r}
+## map the flybase ids to entrezGeneIDs
+idMap = unlist(as.list(org.Dm.egFLYBASE2EG))
+counts = counts[rownames(counts) %in% names(idMap), ]
+rownames(counts) = idMap[rownames(counts)]
+
+## gene length info
+geneLength = getlength(rownames(counts), "dm3", "refGene")
+geneLength[is.na(geneLength)] = 500
+## this is a workaround because the dm3 genome build does not have the length information for
+## all genes in our dataset
+
+# go category mappings
+gene2goObj = as.list(org.Dm.egGO)
+gene2cat = lapply(gene2goObj, names)
+cat2gene = as.list(revmap(org.Dm.egGO))
+```
+
+# Differentially expressed genes
+
+Use the same approach as in the last exercise to compute the differentially expressed genes.
+Generate a named vector where the names are the gene ids and the value is 1 if the gene
+is differentially expressed, 0 otherwise.
+
+A vector with randomly selected genes would be:
+
+```{r}
+deGenes = sample(c(0,1), size = nrow(counts), replace = TRUE, prob = c(0.8, 0.2))
+names(deGenes) = rownames(counts)
+```
+
+
+# Run goseq
+
+Check the documentation ofh the package goseq and run the analysis
+
+```{r}
+pwf = nullp(deGenes,"dm3","refGene", bias.data = geneLength, plot.fit = FALSE)
+pwf = pwf[!is.na(pwf$bias.data), ]
+```
+
+Compare both approaches, with correction for length bias and without
+
+```{r}
+GO.wall = goseq(pwf, gene2cat = gene2cat)
+head(GO.wall)
+GO.hyper = goseq(pwf, gene2cat = gene2cat, method = "Hypergeometric")
+head(GO.hyper)
+```
+
+# Run CAMERA
+
+Check the documentation for the camera function and run also that analysis
+
+
+```{r}
+sessionInfo()
+```
