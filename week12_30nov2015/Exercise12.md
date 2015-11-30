@@ -10,6 +10,134 @@ The data consists of DNA methylation measurements (2 platforms) for replicates o
 First, we load some new packages (install these on your system if needed):
 
 
+```r
+library("minfi")
+```
+
+```
+## Loading required package: BiocGenerics
+## Loading required package: parallel
+## 
+## Attaching package: 'BiocGenerics'
+## 
+## Die folgenden Objekte sind maskiert von 'package:parallel':
+## 
+##     clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+##     clusterExport, clusterMap, parApply, parCapply, parLapply,
+##     parLapplyLB, parRapply, parSapply, parSapplyLB
+## 
+## Das folgende Objekt ist maskiert 'package:stats':
+## 
+##     xtabs
+## 
+## Die folgenden Objekte sind maskiert von 'package:base':
+## 
+##     anyDuplicated, append, as.data.frame, as.vector, cbind,
+##     colnames, do.call, duplicated, eval, evalq, Filter, Find, get,
+##     intersect, is.unsorted, lapply, Map, mapply, match, mget,
+##     order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+##     rbind, Reduce, rep.int, rownames, sapply, setdiff, sort,
+##     table, tapply, union, unique, unlist, unsplit
+## 
+## Loading required package: Biobase
+## Welcome to Bioconductor
+## 
+##     Vignettes contain introductory material; view with
+##     'browseVignettes()'. To cite Bioconductor, see
+##     'citation("Biobase")', and for packages 'citation("pkgname")'.
+## 
+## Loading required package: lattice
+## Loading required package: GenomicRanges
+## Loading required package: S4Vectors
+## Loading required package: stats4
+## Creating a generic function for 'nchar' from package 'base' in package 'S4Vectors'
+## Loading required package: IRanges
+## Loading required package: GenomeInfoDb
+## Loading required package: Biostrings
+## Loading required package: XVector
+## Loading required package: bumphunter
+## Loading required package: foreach
+## foreach: simple, scalable parallel programming from Revolution Analytics
+## Use Revolution R for scalability, fault tolerance and more.
+## http://www.revolutionanalytics.com
+## Loading required package: iterators
+## Loading required package: locfit
+## locfit 1.5-9.1 	 2013-03-22
+## Setting options('download.file.method.GEOquery'='auto')
+```
+
+```r
+library("charm")
+```
+
+```
+## Loading required package: SQN
+## Loading required package: mclust
+##     __  ___________    __  _____________
+##    /  |/  / ____/ /   / / / / ___/_  __/
+##   / /|_/ / /   / /   / / / /\__ \ / /   
+##  / /  / / /___/ /___/ /_/ /___/ // /    
+## /_/  /_/\____/_____/\____//____//_/    version 5.1
+## Type 'citation("mclust")' for citing this R package in publications.
+## Loading required package: nor1mix
+## Loading required package: fields
+## Loading required package: spam
+## Loading required package: grid
+## Spam version 1.3-0 (2015-10-24) is loaded.
+## Type 'help( Spam)' or 'demo( spam)' for a short introduction 
+## and overview of this package.
+## Help for individual functions is also obtained by adding the
+## suffix '.spam' to the function name, e.g. 'help( chol.spam)'.
+## 
+## Attaching package: 'spam'
+## 
+## Das folgende Objekt ist maskiert 'package:stats4':
+## 
+##     mle
+## 
+## Die folgenden Objekte sind maskiert von 'package:base':
+## 
+##     backsolve, forwardsolve
+## 
+## Loading required package: maps
+## 
+##  # ATTENTION: maps v3.0 has an updated 'world' map.        #
+##  # Many country borders and names have changed since 1990. #
+##  # Type '?world' or 'news(package="maps")'. See README_v3. #
+## 
+## 
+## 
+## Attaching package: 'maps'
+## 
+## Das folgende Objekt ist maskiert 'package:mclust':
+## 
+##     map
+## 
+## Loading required package: RColorBrewer
+## Loading required package: genefilter
+## 
+## Attaching package: 'genefilter'
+## 
+## Das folgende Objekt ist maskiert 'package:base':
+## 
+##     anyNA
+## 
+## Welcome to charm version 2.14.0
+## 
+## Attaching package: 'charm'
+## 
+## Das folgende Objekt ist maskiert 'package:minfi':
+## 
+##     qcReport
+## 
+## Das folgende Objekt ist maskiert 'package:bumphunter':
+## 
+##     clusterMaker
+```
+
+```r
+library("GenomicRanges")
+```
 
 After you have unzipped the exercise files, you can follow the steps below to: i) read in a sheet of metadata; ii) read in the raw probe-level data from IDAT files (the format used by Illumina); iii) preprocess the data.
 
@@ -49,13 +177,17 @@ raw <- read.450k.exp(base="6264509024/",
 ## [read.450k] Reading 6264509024_R04C02_Red.idat 
 ## [read.450k] Reading 6264509024_R05C02_Red.idat 
 ## [read.450k] Reading 6264509024_R06C02_Red.idat 
-## [read.450k] Read idat files in  5.085 seconds
-## [read.450k] Creating data matrices ... done in 0.352 seconds
-## [read.450k] Instantiating final object ... done in 1.117 seconds
+## [read.450k] Read idat files in  9.859 seconds
+## [read.450k] Creating data matrices ... done in 0.954 seconds
+## [read.450k] Instantiating final object ... done in 1.926 seconds
 ```
 
 ```r
 ppi <- preprocessIllumina(raw, bg.correct = TRUE, normalize = "controls")
+```
+
+```
+## Loading required package: IlluminaHumanMethylation450kmanifest
 ```
 
 Next, we pull out the *beta* values (consensus methylation levels) in to a matrix:
@@ -367,22 +499,13 @@ dmrs <- dmrFind(p=b1[o,], mod=d1, mod0=d0, coef=2, pns=pns[o],
 ```
 
 ```
-## Warning in lfproc(x, y, weights = weights, cens = cens, base = base, geth =
-## geth, : Estimated rdf < 1.0; not estimating variance
+## Warning in lfproc(x, y, weights = weights, cens = cens, base = base, geth = geth, : Estimated
+## rdf < 1.0; not estimating variance
 ```
 
 ```
-## Warning in lfproc(x, y, weights = weights, cens = cens, base = base, geth =
-## geth, : Estimated rdf < 1.0; not estimating variance
-```
-
-```
-## ==
-```
-
-```
-## Warning in lfproc(x, y, weights = weights, cens = cens, base = base, geth =
-## geth, : Estimated rdf < 1.0; not estimating variance
+## Warning in lfproc(x, y, weights = weights, cens = cens, base = base, geth = geth, : Estimated
+## rdf < 1.0; not estimating variance
 ```
 
 ```
@@ -390,8 +513,17 @@ dmrs <- dmrFind(p=b1[o,], mod=d1, mod0=d0, coef=2, pns=pns[o],
 ```
 
 ```
-## Warning in lfproc(x, y, weights = weights, cens = cens, base = base, geth =
-## geth, : Estimated rdf < 1.0; not estimating variance
+## Warning in lfproc(x, y, weights = weights, cens = cens, base = base, geth = geth, : Estimated
+## rdf < 1.0; not estimating variance
+```
+
+```
+## ==
+```
+
+```
+## Warning in lfproc(x, y, weights = weights, cens = cens, base = base, geth = geth, : Estimated
+## rdf < 1.0; not estimating variance
 ```
 
 ```
@@ -399,8 +531,8 @@ dmrs <- dmrFind(p=b1[o,], mod=d1, mod0=d0, coef=2, pns=pns[o],
 ```
 
 ```
-## Warning in lfproc(x, y, weights = weights, cens = cens, base = base, geth =
-## geth, : Estimated rdf < 1.0; not estimating variance
+## Warning in lfproc(x, y, weights = weights, cens = cens, base = base, geth = geth, : Estimated
+## rdf < 1.0; not estimating variance
 ```
 
 ```
@@ -408,8 +540,8 @@ dmrs <- dmrFind(p=b1[o,], mod=d1, mod0=d0, coef=2, pns=pns[o],
 ```
 
 ```
-## Warning in lfproc(x, y, weights = weights, cens = cens, base = base, geth =
-## geth, : Estimated rdf < 1.0; not estimating variance
+## Warning in lfproc(x, y, weights = weights, cens = cens, base = base, geth = geth, : Estimated
+## rdf < 1.0; not estimating variance
 ```
 
 ```
@@ -417,8 +549,8 @@ dmrs <- dmrFind(p=b1[o,], mod=d1, mod0=d0, coef=2, pns=pns[o],
 ```
 
 ```
-## Warning in lfproc(x, y, weights = weights, cens = cens, base = base, geth =
-## geth, : Estimated rdf < 1.0; not estimating variance
+## Warning in lfproc(x, y, weights = weights, cens = cens, base = base, geth = geth, : Estimated
+## rdf < 1.0; not estimating variance
 ```
 
 ```
@@ -426,28 +558,28 @@ dmrs <- dmrFind(p=b1[o,], mod=d1, mod0=d0, coef=2, pns=pns[o],
 ```
 
 ```
-## Warning in lfproc(x, y, weights = weights, cens = cens, base = base, geth =
-## geth, : Estimated rdf < 1.0; not estimating variance
+## Warning in lfproc(x, y, weights = weights, cens = cens, base = base, geth = geth, : Estimated
+## rdf < 1.0; not estimating variance
 ```
 
 ```
-## Warning in lfproc(x, y, weights = weights, cens = cens, base = base, geth =
-## geth, : Estimated rdf < 1.0; not estimating variance
+## Warning in lfproc(x, y, weights = weights, cens = cens, base = base, geth = geth, : Estimated
+## rdf < 1.0; not estimating variance
 ```
 
 ```
-## Warning in lfproc(x, y, weights = weights, cens = cens, base = base, geth =
-## geth, : Estimated rdf < 1.0; not estimating variance
+## Warning in lfproc(x, y, weights = weights, cens = cens, base = base, geth = geth, : Estimated
+## rdf < 1.0; not estimating variance
 ```
 
 ```
-## Warning in lfproc(x, y, weights = weights, cens = cens, base = base, geth =
-## geth, : Estimated rdf < 1.0; not estimating variance
+## Warning in lfproc(x, y, weights = weights, cens = cens, base = base, geth = geth, : Estimated
+## rdf < 1.0; not estimating variance
 ```
 
 ```
 ## =
-## ===========================================================================
+## ==============================================================================================
 ## ..
 ```
 
@@ -468,20 +600,20 @@ head(dmrs$dmrs)
 ```
 
 ```
-##     chr    start      end     value     area  pns indexStart indexEnd
-## 321  22 45809244 45809952 -36.54717 548.2075 1984       5403     5417
-## 195  22 24890690 24891220 -32.98841 428.8494  705       1784     1796
-## 27   22 22901145 22902237  29.80695 387.4903  577       1437     1449
-## 303  22 42896105 42896846 -26.58877 212.7102 1772       4815     4822
-## 182  22 21386798 21387058 -26.52531 212.2025  468       1164     1171
-## 354  22 50720468 50721626 -29.91718 179.5031 2538       6646     6651
-##     nprobes        avg        max  area.raw
-## 321      15 -0.7857086 -0.9720718 11.785628
-## 195      13 -0.7530544 -0.9441602  9.789707
-## 27       13  0.4918608  0.8346143  6.394191
-## 303       8 -0.6895311 -0.9071111  5.516249
-## 182       8 -0.6100558 -0.9047373  4.880447
-## 354       6 -0.7536264 -0.9642824  4.521758
+##     chr    start      end     value     area  pns indexStart indexEnd nprobes        avg
+## 321  22 45809244 45809952 -36.54717 548.2075 1984       5403     5417      15 -0.7857086
+## 195  22 24890690 24891220 -32.98841 428.8494  705       1784     1796      13 -0.7530544
+## 27   22 22901145 22902237  29.80695 387.4903  577       1437     1449      13  0.4918608
+## 303  22 42896105 42896846 -26.58877 212.7102 1772       4815     4822       8 -0.6895311
+## 182  22 21386798 21387058 -26.52531 212.2025  468       1164     1171       8 -0.6100558
+## 354  22 50720468 50721626 -29.91718 179.5031 2538       6646     6651       6 -0.7536264
+##            max  area.raw
+## 321 -0.9720718 11.785628
+## 195 -0.9441602  9.789707
+## 27   0.8346143  6.394191
+## 303 -0.9071111  5.516249
+## 182 -0.9047373  4.880447
+## 354 -0.9642824  4.521758
 ```
 
 #### Exercise 3. For one of the DMRs found using 450k array data (as above), take a look in the corresponding RRBS data for the same region (assuming measurements are made) to verify that there is validating evidence of the DMR.
