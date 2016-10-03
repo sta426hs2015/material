@@ -17,7 +17,7 @@
 ### Goal: 
 #### produce a 1 paragraph summary
 #### links to a few (<5) good resources
-#### submit a pull request to brainstorm_answers.md
+#### add your description to the #technology_day slack channel (be sure to add the github usernames of your group)
 
 # Part 3 - Brainstorm: Applications/protocols in genomics OR subfields
 
@@ -27,7 +27,7 @@
 
 ## e.g., microarray -> gene expression -> normally distributed (log intensities)
 
-## In-class exercise 2 (3 groups): 
+## In-class exercise 2 (in groups): 
 ### Goal: make the link between technologies, what is measured, statistical models used
 ### For example:
 ##### RNA-seq: sequencing -> gene expression -> ?
@@ -43,7 +43,7 @@
 ### Goal: 
 #### write ~2 sentences about what the method does
 #### again, make the link (technology -> application -> statistics)
-#### submit a pull request to brainstorm_answers.md
+#### submit a pull request to brainstorm_answers.md (add the github usernames of everybody in your group)
 
 [1] [https://liorpachter.wordpress.com/seq/](https://liorpachter.wordpress.com/seq/)
 
